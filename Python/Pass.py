@@ -73,8 +73,7 @@ print('2.Create a New custom password')
 print('2.find your forgotten password')
 print('4.Contact me')
 print(' ')
-print(' ')
-print(' ')
+print('type 99 for Exit ')
 print(' ')
 
 
@@ -103,5 +102,11 @@ while True:
         find_password_string()
     elif serviceChose == 4:
         print('Thank You for Using this tools')
+        print('This tool create by Jible Einux')
+        print('Follow me:')
+        print('----------------------------------------------------')
+        print("Github: https://github.com/JibbleEinuxCODE ")
+        print("Facebook: https://facebook.com/JibbleEinuxCODE ")
+        print('----------------------------------------------------')
     else:
         continue
