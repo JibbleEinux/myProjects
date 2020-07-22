@@ -22,6 +22,7 @@ print('            follow on github,facebook: @JibbleEinuxCODE            ')
 def get_random_string(length):
     letters = string.ascii_lowercase
     result_str = ''.join(random.choice(letters) for i in range(length))
+    print('\n')
     print('----------------------------------------------------')
     print('Your authentication code is generated: ' + result_str)
     print('----------------------------------------------------')
@@ -39,6 +40,7 @@ def get_random_string(length):
 
 
 def find_password_string():
+    print('\n')
     result_str = input('Enter You Authentication Code: ')
     passWord = (str(len(result_str)) + str(result_str[:2].lower()) + str(result_str[:1:-2].upper()) + "-" + str(result_str.count(result_str)) + str(result_str[:1].upper()) + "X" + "6" + "_" + "D" + str(
         result_str[0::3].lower()) + str(result_str.count(result_str)) + "X" + "f" + str(result_str[:4].lower()) + "+" + str(result_str[4::-1].upper())).strip().replace(" ", "")
@@ -51,6 +53,7 @@ def find_password_string():
 
 
 def custom_auth_Code():
+    print('\n')
     result_str = input('Enter You Custom Authentication Code: ')
     passWord = (str(len(result_str)) + str(result_str[:2].lower()) + str(result_str[:1:-2].upper()) + "-" + str(result_str.count(result_str)) + str(result_str[:1].upper()) + "X" + "6" + "_" + "D" + str(
         result_str[0::3].lower()) + str(result_str.count(result_str)) + "X" + "f" + str(result_str[:4].lower()) + "+" + str(result_str[4::-1].upper())).strip().replace(" ", "")
@@ -65,28 +68,26 @@ def custom_auth_Code():
 
 # printing services
 # and details
-print(' ')
-print(' ')
-print('The services of PassGenR tool are:')
-print('1.Create a New random password')
-print('2.Create a New custom password')
-print('2.find your forgotten password')
-print('4.Contact me')
-print(' ')
-print('type 99 for Exit ')
-print(' ')
-
 
 while True:
+    print('\n')
+    print('The services of PassGenR tool are:')
+    print('1.Create a New random password')
+    print('2.Create a New custom password')
+    print('2.find your forgotten password')
+    print('4.Contact me')
+    print('type 99 for Exit ')
     print('Chose your service(1-4)')
     serviceChose = int(input('PassGenR >> '))
     if serviceChose == 99:
         break
+    # random password session
     if serviceChose == 1:
         print('There are some password typs:')
         print('1.Easy, \n2.normal, \n3.Strong, \n4.Extra-Strong')
         print('Enter Your Password type(1-4): ')
         passwordType = int(input())
+        # condition for length of rangom password function parameter
         if passwordType == 1:
             get_random_string(8)
         elif passwordType == 2:
@@ -95,12 +96,17 @@ while True:
             get_random_string(16)
         else:
             get_random_string(20)
+        # creating custom password session
     elif serviceChose == 2:
         print('You can make easily your authenticaion code')
         custom_auth_Code()
+        # finding forgotten password session
     elif serviceChose == 3:
         find_password_string()
+
+        # about session for myself
     elif serviceChose == 4:
+        print('\n')
         print('Thank You for Using this tools')
         print('This tool create by Jible Einux')
         print('Follow me:')
@@ -110,3 +116,6 @@ while True:
         print('----------------------------------------------------')
     else:
         continue
+# Thanks every one
+# Jibble Einux
+# www.facebook.com/JibbleEinuxCODE
