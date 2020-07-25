@@ -1,7 +1,7 @@
 a = gets.to_i
 for i in 1..a
     b = gets
-    c = b.length
+    c = b.length 
     c = c - 1    
     if c <= 10
         puts b
