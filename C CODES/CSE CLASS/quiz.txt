@@ -109,5 +109,76 @@ int main()
     return 0;
 }
 
+-------------------------------------
+5.
 
+#include <stdio.h>
+
+#define PI 3.14
+int PrimeOrNot(int n)
+{
+    int size, i, flag = 0;
+    size = n;
+    for (i = 2; i <= size / 2; ++i)
+    {
+        // condition for non-prime
+        if (size % i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    return flag;
+}
+
+int main()
+{
+    int odd, br[10] = {0}, max = 0, id, PrimeCheck, Idarr[20] = {0};
+    printf("Enter your last 2 digits of Id: ");
+    scanf("%d", &id);
+    PrimeCheck = PrimeOrNot(id);
+    if (PrimeCheck == 0)
+    {
+        printf("Enter Your Id in This array: ");
+        for (int i = 0; i < 9; i++)
+        {
+            scanf("%d", &Idarr[i]);
+        }
+        max = Idarr[0];
+        for (int i = 0; i < 9; i++)
+        {
+            if (max < Idarr[i])
+            {
+                max = Idarr[i];
+            }
+        }
+        printf("Largest Number of ID: %d", max);
+    }
+    else
+    {
+        printf("Enter Your Id in This array: ");
+        for (int i = 0; i < 9; i++)
+        {
+            scanf("%d", &Idarr[i]);
+        }
+        for (int i = 0; i < 9; i++)
+        {
+            if (Idarr[i] % 2 != 0)
+            {
+                br[i] = Idarr[i];
+            }
+        }
+        max = br[0];
+        for (int i = 0; i < 9; i++)
+        {
+            if (max < br[i])
+            {
+                max = br[i];
+            }
+        }
+        printf("Largest Number of ID: %d", max);
+    }
+
+    return 0;
+}
 
