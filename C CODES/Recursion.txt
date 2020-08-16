@@ -156,7 +156,7 @@ int fiboNum(int n)
 {
     if (n <= 1)
         return n;
-    return fiboNum(n - 1) + fiboNum(n - 2);
+    return 2 + fiboNum(n - 1) + fiboNum(n - 2);
 }
 
 int main()
